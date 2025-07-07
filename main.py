@@ -14,9 +14,9 @@ from stats import sort_listed_dict
 
 def main():
     book_contents = get_book_text(sys.argv[1])
-    #print(book_contents)
+    
     word_number = word_counter(book_contents)
-    #print(f"{word_number} words found in the document") 
+    
     char_counts = character_counter(book_contents)
     print("============ BOOKBOT ============")
     print("Analyzing book found at books/frankenstein.txt...")
