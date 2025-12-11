@@ -1,13 +1,13 @@
+from stats import word_counter
+
+
 def get_book_text(file_path):
     with open(file_path) as book:
         book_contents = book.read()
         return book_contents
     
 
-def word_counter(book_contents):
-    word_list = book_contents.split()
-    num_words = len(word_list)
-    return num_words
+
 
     
 
