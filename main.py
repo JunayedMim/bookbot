@@ -19,8 +19,16 @@ def main():
     char_count = character_counter(book_contents)
     sorted_count = dict_sort(char_count)
     
+    print("============ BOOKBOT ============")
+    print("Analyzing book found at books/frankenstein.txt...")
+    print("----------- Word Count ----------")
     print(f"Found {word_count} total words")
-    print(sorted_count)
+    
+    print("--------- Character Count -------")
+    for dict in sorted_count:
+        print(f"{dict['char']}: {dict['num']}")
+    
+    print("============= END ===============")
 
 
 main()

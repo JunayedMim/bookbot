@@ -19,17 +19,27 @@ def character_counter(book_contents):
 
     return char_dict
 
+def sort_on(item):
+    return item["num"]
+
+
+
 
 def dict_sort(char_dict):
     sorted_list = []
-    single_char_dict = {"char": "char_value", "num": "num_value"}
     
-    for char in char_dict:
-        single_char_dict["char"] = char
-        single_char_dict["num"] = char_dict[char]
-        single_char_dict_sort = {single_char_dict["char"]: single_char_dict["num"]}
+    for char, num in char_dict.items():
+        if not char.isalpha():
+            continue
 
-        sorted_list.append(single_char_dict_sort)
+        single_char_dict = {
+            "char": char,
+            "num": num
+        }
+        sorted_list.append(single_char_dict)
     
+
+        
+    sorted_list.sort(reverse=True, key=sort_on)
     return sorted_list
 
